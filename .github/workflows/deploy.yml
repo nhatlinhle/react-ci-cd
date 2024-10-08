@@ -24,7 +24,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
         run: |
           ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
-            cd /usr/share/html/react-ci-cd
+            cd /usr/share/nginx/html/react-ci-cd
             git pull origin main # Pull source từ GitHub về
             npm install # Cài đặt dependencies
             npm run build # Build ứng dụng React
